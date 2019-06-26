@@ -1,9 +1,7 @@
-#include <Arduino.h>
-
 #include <SPI.h>
 #include <LoRa.h>
 
-int counter = 0;
+int counter = 5;
 
 void setup()
 {
@@ -28,9 +26,7 @@ void loop()
 
   // send packet
   LoRa.beginPacket();
-  LoRa.print("4");
+  //  LoRa.print("4");
   LoRa.print(counter);
   LoRa.endPacket();
-
-  counter++;
 }
